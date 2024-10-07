@@ -1,0 +1,31 @@
+
+body {
+   display: flex;
+   position: relative;
+   max-width: 796px;
+   height: auto;
+   justify-content: center;
+   gap: 20px;
+}
+h1 {
+   font-family: tiny;
+   font-size: 2em;
+   font-family: "Inter Tight", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 600;
+   font-style: normal;
+   width: 100%;
+}
+.inter-tight-h2 {
+   font-family: "Inter Tight", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 600;
+   font-style: normal;
+ }
+.profile-photo {
+   width: 150px;
+   height: 150px;
+   border-radius: 20px;
+   background-size: cover;
+   background-image: url('images/Photo.jpeg');
+}
