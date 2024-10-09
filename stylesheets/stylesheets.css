@@ -6,10 +6,14 @@ font-size: 8px;
 body {
    width: 100%;
    height: 100%;
-   display: block;
+   display: flex;
    position: relative;
    align-content: center;
    margin-top: 12rem;
+   margin-bottom: 8rem;
+   gap: 10rem;
+   flex-direction: column;
+   flex-wrap: nowrap;
 }
 h1 {
    font-family: tiny;
@@ -184,6 +188,21 @@ h1 {
    text-align: center;
    translate: 0 12rem;
 }
-
+.footer {
+   width: inherit;
+   height: auto;
+   position: relative;
+   max-width: 496px;
+   margin: auto;
+}
+.footer p {
+   font-size: 1.2rem;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #666;
+   font-family: "IBM Plex Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
+   text-align: center;
+}
 
 
