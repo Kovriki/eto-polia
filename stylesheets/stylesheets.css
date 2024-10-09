@@ -169,6 +169,35 @@ h3 {
    box-shadow: 0px 0px 74px 0px #fff inset;  
 }
 
+.caseItem:active {
+   transition: .5s;
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+   transform: scale(1);
+   background-color: #666;
+}
+
+
+.caseItem.sber:active {
+   /* background-color: #53A58E; */
+   background-color: rgba(83, 165, 142, .2);
+}
+.caseItem.skim:active {
+   /* background-color: #E8C451; */
+   background-color: rgba(232, 196, 81, .2);
+}
+.caseItem.mts:active {
+   /* background-color: #DF4B2B; */
+   background-color: rgba(223, 75, 43, .2)
+}
+.caseItem.freelance:active {
+   /* background-color: #86B1DD; */
+   background-color: rgba(134, 177, 221, .2)
+}
+
+/* .caseItem:active .readMore {
+   color: #fff;
+} */
+
 .tooltip {
    position: absolute;
    top: 50%; 
@@ -252,17 +281,17 @@ h3 {
    background-size: contain;
 }
 
-.sber{
+.logoIcon.sber{
    background-image: url('images/Sber.svg');
 }
-.mts {
+.logoIcon.mts {
    background-image: url('images/mts.svg');
    border-radius: .2rem;
 }
-.skim{
+.logoIcon.skim{
    background-image: url('images/skim.svg');
 }
-.freelance {
+.logoIcon.freelance {
    background-image: url('images/freelance.svg');
 }
 
@@ -300,6 +329,174 @@ h3 {
    text-align: center;
    translate: 0 12rem;
 }
+
+
+
+/* Expirience */
+
+.experience {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   max-width: 400px;
+   height: auto;
+   justify-content: center;
+   gap: 2rem;
+   margin: auto;
+   align-items: center
+}
+
+ul{
+   font-size: 1.6rem;
+   font-family: "Inter Tight", sans-serif;
+   line-height: 2.5rem;
+   font-weight: 300;
+   color: #91999D;
+}
+li{
+   margin-bottom: .5rem;
+}
+
+li span {
+   font-weight: 500;
+}
+
+
+
+ 
+.product-results {
+   position: relative;
+   max-width: auto;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .result-list {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   max-height: 20rem; /* Высота для первых 3 элементов */
+   overflow: hidden;
+   transition: max-height 0.5s ease; /* Анимация при раскрытии списка */
+   position: relative;
+ }
+
+ .result-list.innerResults {
+   max-height: 10rem;
+ }
+ 
+ .result-list.open {
+   max-height: 1000px; /* Высота увеличивается при раскрытии списка */
+ }
+
+
+ .result-list::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 50px; /* Высота градиента */
+   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #fff); /* Плавный переход к белому */
+   pointer-events: none; /* Чтобы градиент не мешал кликам */
+   z-index: 1; /* Располагаем градиент поверх списка */
+ }
+
+ 
+ .result-list.open::after {
+   display: none; /* Убираем градиент при раскрытии списка */
+ }
+
+
+ .toggle-btn {
+   height: 4rem;
+   width: fit-content;
+   margin: auto;
+   margin-top: 15px;
+   background: none;
+   border: none;
+   border-radius: 4rem;
+   font-size: 1.6rem;
+   font-family: "Inter Tight", sans-serif;
+   line-height: 2.5rem;
+   font-weight: 300;
+   text-decoration: none;
+   color: #91999D;
+   cursor: pointer;
+   padding: 0 2rem;
+   transition: all 0.8s ease;
+
+
+ }
+ 
+ .toggle-btn:hover {
+   color: #333;
+   /* position: absolute; */
+   bottom: 0;
+   left: 0;
+   width: fit-content;
+   height: 4rem;
+   padding: 0 2rem;
+   border: 1px solid #DBDBDB;
+   background-color: #f5f5f5;
+   background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
+   border-radius: 4rem;
+   transition: all 0.8s ease;
+   z-index: 0; 
+   animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
+ }
+ 
+
+/* Карточки кейсов */
+
+
+.cases{
+   width: 400px;
+   display: flex;
+   flex-direction: row;
+   gap: 4rem;
+   position: relative;
+
+}
+
+.caseCard {
+   font-size: 16px;
+   color: #333;
+   /* position: absolute; */
+   bottom: 0;
+   left: 0;
+   width: fit-content;
+   height: auto;
+   padding: 0 2rem;
+   border: 1px solid #DBDBDB;
+   background-color: #f5f5f5;
+   background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
+   border-radius: 4rem;
+   transition: all 0.8s ease;
+   z-index: 0; 
+   animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
+}
+
+.caseCover {
+   width: 30rem;
+   height: 20rem;
+   background-color: #333;
+   border-radius: 4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
 .footer {
    width: inherit;
    height: auto;
@@ -316,6 +513,9 @@ h3 {
    font-style: normal;
    text-align: center;
 }
+
+
+
 
 
 
