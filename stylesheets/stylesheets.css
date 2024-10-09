@@ -1,15 +1,19 @@
 @import url(fonts.css);
 
+html {
+font-size: 8px;
+}
 body {
-width: 100%;
-height: 100%;
-display: block;
-position: relative;
-align-content: center;
+   width: 100%;
+   height: 100%;
+   display: block;
+   position: relative;
+   align-content: center;
+   margin-top: 12rem;
 }
 h1 {
    font-family: tiny;
-   font-size: 2em;
+   font-size: 4rem;
    font-family: "Inter Tight", sans-serif;
    font-optical-sizing: auto;
    font-weight: 600;
@@ -23,7 +27,7 @@ h1 {
    max-width: 496px;
    height: auto;
    justify-content: center;
-   gap: 20px;
+   gap: 6rem;
    margin: auto;
    align-items: center
 }
@@ -34,22 +38,22 @@ h1 {
    font-style: normal;
  }
 .profile-photo {
-   width: 150px;
-   height: 150px;
-   border-radius: 20px;
+   width: 10rem;
+   height: 10rem;
+   border-radius: 2rem;
    background-size: cover;
    background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQFkYXJqhpNBtA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708263177720?e=1733961600&v=beta&t=AuB0fRcgBFk7bYnEZuslAQVmRd_DghcKpSBPy5GA1Es')
 
 }
-
 .caseItem {
    position: relative;
-   width: 150px;
-   height: 150px;
+   width: 20rem;
+   height: 20rem;
    background-color: #ffffff;
-   border-radius: 1em;
+   border-radius: 4em;
    border: 1px solid #f5f5f5;
    transition: transform 0.6s ease-in-out;
+   cursor: pointer;
 }
 .caseItem:hover {
    background-color: #f5f5f5;
@@ -57,7 +61,7 @@ h1 {
    box-shadow: #91999D;
    transition: .5s;
    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-   transform: scale(1.05);
+   transform: scale(1.02   );
    background: var(--White, #f5f5f5);
    box-shadow: 0px 0px 74px 0px #fff inset;  
 }
@@ -66,24 +70,24 @@ h1 {
    position: absolute;
    top: 50%; 
    left: 50%;
-   min-width: 50px; 
+   min-width: 4rem; 
    white-space: nowrap;
    text-align: center;
    display: inline-block;
    transform: translate(-50%, -100%) scale(0.8);
-   padding: 10px;
+   padding: 1.6rem;
    background: rgb(69,72,75);
    background: linear-gradient(0deg, rgba(69,72,75,1) 0%, rgba(26,26,26,1) 7%, rgba(69,72,75,1) 100%);
    color: white;
    text-align: center;
-   border-radius: 10px;
+   border-radius: 1.2rem;
    opacity: 0;
    visibility: hidden;
    transition: opacity .2s ease, visibility 0.3s ease, transform 0.3s ease;
    z-index: 10;
    transition: .4s;
    animation-delay: .4s;
-   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   box-shadow: 0 4px 1.2rem rgba(0, 0, 0, 0.2);
    filter: blur(8px);
    backdrop-filter: blur(10px);
    animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
@@ -92,15 +96,18 @@ h1 {
 }
 
 .tooltip p {
-   font-size: 1.2em;
+   font-size: 2rem;
    font-family: 'Times New Roman', Times, serif;
    margin: 0;
+   margin-bottom: .8rem;
    color: 0 1px 3px rgba(255, 255, 255, 0.7);
    text-shadow: #333;
+   text-transform: uppercase;
+
 }
 
 .tooltip span {
-   font-size: 0.8em;
+   font-size: 1.2rem;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    transform: scale(.2);
    color: #666;
@@ -133,8 +140,50 @@ h1 {
    width: 4em;
    height: 4em;
    position: relative;
-   background-color: gray;
    border-radius: 1em;
    margin: auto;
    top: calc( 50% - 2em );
+   transform:  translate(0,0) scale(.8);
+   transition: .5s;
+   background-image: url('images/Sber.svg');
+   background-position: center;
+   background-size: contain;
 }
+
+.caseItem:hover .logoIcon {
+   border-color: #DBDBDB; 
+   box-shadow: #91999D;
+   transition: .5s;
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+   animation-duration: .6s;
+   transform: scale(1.05);
+   /* box-shadow: 0px 0px 74px 0px #fff inset;   */
+   transform:  translate(0, -1rem) scale(1);
+}
+
+.readMore {
+   font-size: 1.6rem;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   transform: scale(.8);
+   color: #C1C4C9;
+   font-family: "IBM Plex Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
+   opacity: 0;
+   translate: 0 12rem;
+
+}
+
+.caseItem:hover .readMore {
+   opacity: 1;
+   transition: .5s;
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+   animation-duration: .6s;
+   transform: scale(1);
+   transform:  translate(0, -1rem) scale(1);
+   text-align: center;
+   translate: 0 12rem;
+}
+
+
+
