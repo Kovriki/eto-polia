@@ -25,16 +25,45 @@ h1 {
    font-style: normal;
    width: 100%;
 }
+
+h2{
+   font-size: 2rem;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #666;
+   font-family: "IBM Plex Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
+   text-align: center;
+}
+
+h3 {
+   font-size: 1.2rem;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: #666;
+   font-family: "IBM Plex Mono", monospace;
+   font-weight: 400;
+   font-style: normal;
+   text-align: center;
+}
+
 .hero{
    display: flex;
    flex-direction: column;
    position: relative;
-   max-width: 496px;
+   max-width: 400px;
    height: auto;
    justify-content: center;
    gap: 6rem;
    margin: auto;
    align-items: center
+}
+
+.hero p {
+   font-size: 1.6rem;
+   font-family: "Inter Tight", sans-serif;
+   line-height: 2.5rem;
+   font-weight: 300;
+   color: #91999D;
 }
 .inter-tight-h2 {
    font-family: "Inter Tight", sans-serif;
@@ -50,6 +79,75 @@ h1 {
    background-image: url('https://media.licdn.com/dms/image/v2/D4D03AQFkYXJqhpNBtA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1708263177720?e=1733961600&v=beta&t=AuB0fRcgBFk7bYnEZuslAQVmRd_DghcKpSBPy5GA1Es')
 
 }
+
+/* Contacts */
+
+.social {
+    position: relative;
+    display: inline-flex;
+    gap: 4rem;
+    padding: 1rem;
+    height: 4rem;
+    align-items: center;
+}
+
+.social a {
+   font-size: 1.6rem;
+   font-family: "Inter Tight", sans-serif;
+   line-height: 2.5rem;
+   font-weight: 300;
+   text-decoration: none;
+   color: #91999D;
+   transition: .4s;
+}
+
+.social a:hover{
+   color: #333;
+}
+
+.highlight {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 0;
+   height: 4rem;
+   border: 1px solid #DBDBDB;
+   background-color: #f5f5f5;
+   background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
+   border-radius: 4rem;
+   opacity: 0;
+   filter: blur(1rem);
+   transform: translateY(1rem);
+   transition: all 0.4s ease;
+   z-index: 0; 
+   animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
+}
+
+.social:hover .highlight {
+   opacity: 1;
+   filter: blur(0);
+   transform: translateY(-.8rem);
+}
+
+.social:not(:hover) .highlight {
+   opacity: 0;
+   filter: blur(1rem);
+   transform: translateY(1rem); 
+}
+
+.link {
+   position: relative;
+   text-decoration: none;
+   color: #555;
+   font-size: 16px;
+   padding: 10px 20px;
+   z-index: 1;
+}
+
+
+
+/* Cases */
+
 .caseItem {
    position: relative;
    width: 20rem;
@@ -97,14 +195,14 @@ h1 {
    backdrop-filter: blur(10px);
    animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
    animation-duration: .4s
- 
 }
 
 .tooltip p {
    font-size: 2rem;
-   font-family: 'Times New Roman', Times, serif;
+   /* font-family: 'Times New Roman', Times, serif; */
+   font-family: "Inter Tight", sans-serif;
    margin: 0;
-   margin-bottom: .8rem;
+   margin-bottom: .2rem;
    color: 0 1px 3px rgba(255, 255, 255, 0.7);
    text-shadow: #333;
    text-transform: uppercase;
@@ -150,9 +248,22 @@ h1 {
    top: calc( 50% - 2em );
    transform:  translate(0,0) scale(.8);
    transition: .5s;
-   background-image: url('images/Sber.svg');
    background-position: center;
    background-size: contain;
+}
+
+.sber{
+   background-image: url('images/Sber.svg');
+}
+.mts {
+   background-image: url('images/mts.svg');
+   border-radius: .2rem;
+}
+.skim{
+   background-image: url('images/skim.svg');
+}
+.freelance {
+   background-image: url('images/freelance.svg');
 }
 
 .caseItem:hover .logoIcon {
@@ -205,5 +316,8 @@ h1 {
    font-style: normal;
    text-align: center;
 }
+
+
+
 
 
