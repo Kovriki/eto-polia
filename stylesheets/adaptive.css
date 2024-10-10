@@ -1,13 +1,82 @@
-@media only screen and (min-width: 1920px)  {
+/* @media only screen and (min-width: 1920px)  {
 
- }
+}
 
- @media only screen and (min-width: 1680px) and (max-width: 1920px) {
+@media only screen and (min-width: 1680px) and (max-width: 1920px) {
  
- }
+}
 
- @media only screen and (min-width: 320px) and (max-width: 512px) {
+@media only screen and (min-width: 320px) and (max-width: 512px) {
    .html {
       font-size: 6px;
       }
- }
+    body {
+      width: 100vw;
+    }
+} */
+
+
+@media  (max-width: 796px){
+  html {
+    font-size: 8px;
+    overflow-x: hidden;
+  }
+  body {
+    /* background-color: rgb(132, 187, 250); */
+    overflow-x: hidden;
+  }
+  .social {
+    gap: 1rem ;
+  }
+  .hero, 
+  .experience, 
+  .footer {
+    width: calc(100% - 4rem);
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+  }
+  .linkWrapper {
+    flex-wrap: wrap;
+  }
+  .linkWrapper .caseItem {
+    flex: 1 1 48%;
+  }
+
+  .casesSber,
+  .casesSkim {
+    flex-direction: column;
+    width: 100%;
+  }
+  .caseCard {
+    width: 90%;
+  }
+  .caseCover {
+    height: 20rem;
+  }
+
+}
+
+
+/* 
+@media  (max-width: 420px){
+  html {
+    font-size: 8px;
+    overflow-x: hidden;
+
+  }
+  body {
+    background-color: aqua;
+    overflow-x: hidden;
+
+  }
+  .hero, .experience, .footer {
+    width: 100%;
+  }
+  .linkWrapper {
+    flex-wrap: wrap;
+  }
+  .linkWrapper .caseItem {
+    flex: 1 1 48%;
+  }
+} */
