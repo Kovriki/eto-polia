@@ -602,18 +602,6 @@ li span {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 .caseCover {
    width: 100%;
    height: 16rem;
@@ -625,11 +613,14 @@ li span {
 
 .caseCard h1{
    font-size: 2rem;
+   font-weight: 500;
+   line-height: 120%;
    padding-left: 1rem;   
    padding-right: 1rem;
    text-align: left;
 }
-.caseCard p {
+.caseCard p,
+.prjCard p {
    font-size: 1.6rem;
    font-family: "Inter Tight", sans-serif;
    line-height: 2.5rem;
@@ -655,6 +646,9 @@ li span {
 #skim1{
    background-image: url(images/Covers/skim.jpg);
 }
+#shum{
+   background-image: url(images/Covers/shum.jpg);
+}
 
 .disabeledCard {
    filter: opacity(.5);
@@ -663,7 +657,77 @@ li span {
 
 
 
+/* Other projects */
 
+.otherProjects {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1rem;
+}
+
+.prjCard {
+   width: 100%;
+   height: fit-content;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 1rem;
+   padding: .5rem;
+   padding-right: 1.5rem;
+
+   background-color: #f5f5f5;
+   border-radius: 2rem;
+   border: 1px solid #DBDBDB;
+   background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
+   color: #333;
+   text-decoration: none;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+
+   animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
+   transition: transform 0.3s ease, opacity 0.3s ease;
+   transition: all 4s ease;
+   overflow: hidden;
+
+   justify-content: space-between;
+
+}
+.prjCard:hover {
+   box-shadow: 0 0 36rem 0 #fff inset;
+   transition: all 4s ease;
+
+}
+
+.prjCard h1 {
+   font-size: 1.6rem;
+   font-weight: 500;
+   text-align: left;
+   padding-left: 1rem;
+   margin-bottom: 1rem;
+   line-height: 120%;
+}
+
+/* .prjCard p {
+   font-size: 1.6rem;
+} */
+
+.prjCardCover {
+   height: 10rem;
+   width: 40%;
+   background-color: #333;
+   background-position: center;
+   background-size: cover;
+   border-radius: 1.5rem 0.5rem 0.5rem 1.5rem;
+
+}
+
+.prjCard .textBox{
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   height: fit-content;
+
+}
 
 
 /* Footer */

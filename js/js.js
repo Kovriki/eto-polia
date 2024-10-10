@@ -1,19 +1,17 @@
 
 // прогресс прокрутки
 
-window.onscroll = function() {
-    scrollProgress();
-  };
+// window.onscroll = function() {
+//     scrollProgress();
+//   };
 
-function scrollProgress() {
-    // Высчитываем общую высоту документа
-    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (windowScroll / height) * 100;
+// function scrollProgress() {
+//     let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//     let scrolled = (windowScroll / height) * 100;
     
-    // Изменяем ширину полосы
-    document.getElementById("scrollBar").style.width = scrolled + "%";
-};
+//     document.getElementById("scrollBar").style.width = scrolled + "%";
+// };
 
 
 
