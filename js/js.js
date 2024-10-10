@@ -1,3 +1,67 @@
+
+// прогресс прокрутки
+
+window.onscroll = function() {
+    scrollProgress();
+  };
+
+function scrollProgress() {
+    // Высчитываем общую высоту документа
+    let windowScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolled = (windowScroll / height) * 100;
+    
+    // Изменяем ширину полосы
+    document.getElementById("scrollBar").style.width = scrolled + "%";
+};
+
+
+
+// Социальные сети
+
+document.addEventListener('DOMContentLoaded', function () {
+   const links = document.querySelectorAll('.link');
+   const highlight = document.querySelector('.highlight');
+   
+   links.forEach(link => {
+       link.addEventListener('mouseenter', function () {
+           const linkCoords = this.getBoundingClientRect();
+           const containerCoords = this.parentElement.getBoundingClientRect(); 
+
+           const width = linkCoords.width;
+           const left = linkCoords.left - containerCoords.left;
+
+
+           highlight.style.width = `${width}px`;
+           highlight.style.left = `${left}px`;
+       });
+   });
+});
+
+
+
+
+// Воспроизведение звука
+
+document.addEventListener('DOMContentLoaded', function () {
+    const caseItems = document.querySelectorAll('.caseItem'); // Получаем все элементы с классом .caseItem
+    const hoverSound = document.getElementById('hoverSound'); // Звук, который будет проигрываться
+
+    caseItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (hoverSound) {
+                hoverSound.currentTime = 0; // Перематываем звук в начало
+                hoverSound.play().catch((error) => {
+                    console.log('Ошибка воспроизведения звука:', error);
+                });
+            }
+        });
+    });
+});
+
+
+
+
 // Скролл до якорного элемента
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -21,6 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
 // Скрытие части списка
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -40,5 +106,4 @@ document.addEventListener('DOMContentLoaded', function () {
        });
    });
 });
-
 
