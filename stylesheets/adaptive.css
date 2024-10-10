@@ -36,6 +36,8 @@
     padding-left: 1rem;
 
   }
+
+
   .linkWrapper {
     flex-wrap: wrap;
   }
@@ -43,16 +45,33 @@
     flex: 1 1 48%;
   }
 
+
+  .hero p,
+  li {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+
+
   .casesSber,
   .casesSkim {
     flex-direction: column;
     width: 100%;
+    gap: 1rem;
   }
   .caseCard {
     width: 90%;
   }
   .caseCover {
-    height: 20rem;
+    height: 24rem;
+  }
+
+  .casesSber .caseCard:nth-child(1),
+  .casesSber .caseCard:nth-child(2),
+  .casesSber .caseCard:nth-child(3)
+  {
+    transform: translateX(0) translateY(0) rotate(0);
   }
 
 }
@@ -60,23 +79,9 @@
 
 /* 
 @media  (max-width: 420px){
-  html {
-    font-size: 8px;
-    overflow-x: hidden;
+ 
+  .caseCard {
+    width: 90%;
+  }
 
-  }
-  body {
-    background-color: aqua;
-    overflow-x: hidden;
-
-  }
-  .hero, .experience, .footer {
-    width: 100%;
-  }
-  .linkWrapper {
-    flex-wrap: wrap;
-  }
-  .linkWrapper .caseItem {
-    flex: 1 1 48%;
-  }
 } */

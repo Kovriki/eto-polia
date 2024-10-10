@@ -1,7 +1,7 @@
 @import url(fonts.css);
 
 html {
-font-size: 8px;
+font-size: 10px;
 /* overflow: hidden;
  */
  overflow-x: hidden;
@@ -74,7 +74,7 @@ h3 {
    display: flex;
    flex-direction: column;
    position: relative;
-   width: 400px;
+   width: 496px;
    height: auto;
    justify-content: center;
    gap: 6rem;
@@ -396,7 +396,7 @@ h3 {
    display: flex;
    flex-direction: column;
    position: relative;
-   width: 400px;
+   width: 496px;
    height: auto;
    justify-content: center;
    gap: 2rem;
@@ -511,6 +511,9 @@ li span {
 /* Карточки кейсов */
 
 
+
+
+
 .casesSber, 
 .casesSkim {
    display: flex;
@@ -527,6 +530,7 @@ li span {
 .casesSkim:hover {
    gap: 1rem;
 }
+
 
 
 
@@ -558,6 +562,9 @@ li span {
    text-decoration: none;
 }
 
+
+
+/* Sber cards */
 .casesSber .caseCard:nth-child(1) {
    transform: translateX(2rem) translateY(4rem) rotate(-10deg);
 }
@@ -568,18 +575,44 @@ li span {
    transform: translateX(-2rem) translateY(4rem) rotate(8deg);
 }
 
+/* Skim cards */
+.casesSkim .caseCard:nth-child(1) {
+   transform: translateX(2rem) translateY(0) rotate(-4deg);
+   /* transform:  scale(1.4); */
+}
+
+
+/* hover on all cards */
 .casesSber .caseCard:nth-child(1):hover, 
 .casesSber .caseCard:nth-child(2):hover, 
-.casesSber .caseCard:nth-child(3):hover {
+.casesSber .caseCard:nth-child(3):hover,
+.casesSkim .caseCard:nth-child(1):hover {
    box-shadow: 0 0 36rem 0 #fff inset;
 }
 
+
+/* hover on cases all cards set directrly */
 .casesSber:hover .caseCard:nth-child(1),
 .casesSber:hover .caseCard:nth-child(2),
-.casesSber:hover .caseCard:nth-child(3)
-{
+.casesSber:hover .caseCard:nth-child(3),
+.casesSkim:hover .caseCard:nth-child(1) {
    transform: translateX(0) translateY(0) rotate(0);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .caseCover {
    width: 100%;
@@ -606,7 +639,10 @@ li span {
    padding-right: 1rem;
 }
 
-
+/* Set up covers on cards by ID */
+.fishCover{
+   background-image: url(images/Covers/default-cover.jpg);
+}
 #sber1{
    background-image: url(images/Covers/sber-rebranding.jpg);
 }
@@ -616,12 +652,14 @@ li span {
 #sber3{
    background-image: url(images/Covers/sber-design-system.jpg);
 }
-
-
-.skim{
-   transform: translateX(0) translateY(0) rotate(0);
+#skim1{
+   background-image: url(images/Covers/skim.jpg);
 }
 
+.disabeledCard {
+   filter: opacity(.5);
+   cursor: no-drop;
+}
 
 
 
@@ -633,7 +671,7 @@ li span {
    width: inherit;
    height: auto;
    position: relative;
-   width: 400px;
+   width: 496px;
    margin: auto;
 }
 .footer p {
