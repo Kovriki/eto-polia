@@ -69,7 +69,8 @@
 
   .casesSber .caseCard:nth-child(1),
   .casesSber .caseCard:nth-child(2),
-  .casesSber .caseCard:nth-child(3)
+  .casesSber .caseCard:nth-child(3),
+  .casesSkim .caseCard:nth-child(1)
   {
     transform: translateX(0) translateY(0) rotate(0);
   }
