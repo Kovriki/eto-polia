@@ -15,6 +15,7 @@
 
 
 
+
 // Социальные сети
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -105,3 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 });
 
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  };
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  } ;
