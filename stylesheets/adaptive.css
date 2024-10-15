@@ -18,16 +18,36 @@
 
 @media  (max-width: 796px){
   html {
-    font-size: 8px;
+    font-size: 9px;
     overflow-x: hidden;
   }
+
   body {
     /* background-color: rgb(132, 187, 250); */
     overflow-x: hidden;
   }
+
   .social {
+    width: 100%;
     gap: 1rem ;
   }
+
+  .social a:hover{
+    color: #91999D;
+  }
+
+  .social:hover .highlight {
+    opacity: 0;
+  }
+
+  .link {
+    padding: 0;
+  }
+
+
+
+
+
   .hero, 
   .experience, 
   .footer {
@@ -39,10 +59,13 @@
 
 
   .linkWrapper {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
   .linkWrapper .caseItem {
-    flex: 1 1 48%;
+    /* flex: 1 1 48%; */
   }
 
 

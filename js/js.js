@@ -113,3 +113,37 @@ function openModal() {
   function closeModal() {
     document.getElementById("myModal").style.display = "none";
   } ;
+
+
+
+
+// Анимация переключения страницы
+
+
+document.addEventListener('DOMContentLoaded', function() {
+const links = document.querySelectorAll('.transition-link');
+
+links.forEach(link => {
+  link.addEventListener('click', function(event) {
+      event.preventDefault(); // Отключаем стандартное поведение ссылки
+      const href = link.getAttribute('href');
+      
+      // Запускаем анимацию исчезновения страницы
+      document.querySelector('.page').classList.add('fade-out');
+      
+      // Ждем окончания анимации (1 секунда) и выполняем переход
+      setTimeout(() => {
+          window.location.href = href;
+      }, 1000); // Время совпадает с длительностью transition
+  });
+});
+});
+
+
+
+
+// анимация появления страницы
+
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded'); // После загрузки страницы она плавно появляется
+});
