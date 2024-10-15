@@ -45,9 +45,9 @@ h2{
 }
 
 h3 {
-   font-size: 1.2rem;
-   /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-   color: #666;
+   font-size: 1.4rem;
+   line-height: 140%;
+   color: #91999D;
    font-family: "IBM Plex Mono", monospace;
    font-weight: 400;
    font-style: normal;
@@ -68,6 +68,7 @@ h5 {
    line-height: 2.5rem;
    font-weight: 600;
    text-align: center;
+   margin-bottom: .6rem;
    /* color: #91999D; */
 }
 
@@ -434,7 +435,7 @@ p {
    position: relative;
    border-radius: 1em;
    margin: auto;
-   top: calc( 50% - 2em );
+   top: calc( 50% - 1.5em );
    transform:  translate(0,0) scale(.8);
    transition: .5s;
    background-position: center;

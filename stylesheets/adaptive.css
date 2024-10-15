@@ -76,6 +76,34 @@
   }
 
 
+  .logoIcon{
+    top: calc( 50% - 1.5em );
+    transform:  translate(0,0) scale(.8);
+  }
+
+  .caseItem:hover {
+    top: calc( 50% - 1.5em );
+    transform:  translate(0,0) scale(1);
+    border: 1px solid #f5f5f5;
+    background-color: #ffffff;
+  }
+  
+
+  .caseItem:hover .tooltip {
+    opacity: 0;
+  }
+
+
+  .caseItem:hover .logoIcon{
+    top: calc( 50% - 1.5em );
+    transform:  translate(0,0) scale(.8);
+  }
+
+  .caseItem:hover .readMore{
+    opacity: 0;
+  }
+
+
 
   .casesSber,
   .casesSkim {
