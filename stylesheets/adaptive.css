@@ -54,18 +54,13 @@
     width: calc(100% - 4rem);
     padding-right: 1rem;
     padding-left: 1rem;
-
   }
-
 
   .linkWrapper {
     /* flex-wrap: wrap; */
     width: 100%;
     display: flex;
     justify-content: space-between;
-  }
-  .linkWrapper .caseItem {
-    /* flex: 1 1 48%; */
   }
 
 
@@ -125,6 +120,25 @@
   {
     transform: translateX(0) translateY(0) rotate(0);
   }
+
+
+
+
+
+
+  .skills{
+   flex-direction: column;
+   width: 100%;
+  }
+
+  .skillsBox{
+   width: 90%;
+  }
+
+
+
+
+
 
 }
 

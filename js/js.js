@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Скрытие части списка
 
 document.addEventListener('DOMContentLoaded', function () {
-   const toggleButtons = document.querySelectorAll('.toggle-btn');  // Получаем все кнопки
+   const toggleButtons = document.querySelectorAll('.toggle-btn');
 
    toggleButtons.forEach(button => {
        button.addEventListener('click', function () {
@@ -97,10 +97,10 @@ document.addEventListener('DOMContentLoaded', function () {
            
            if (resultList.classList.contains('open')) {
                resultList.classList.remove('open');
-               this.textContent = 'Показать все';  // Меняем текст кнопки на "Показать все"
+               this.textContent = 'Узнать больше'; 
            } else {
                resultList.classList.add('open');
-               this.textContent = 'Скрыть';  // Меняем текст кнопки на "Скрыть"
+               this.textContent = 'Скрыть';
            }
        });
    });

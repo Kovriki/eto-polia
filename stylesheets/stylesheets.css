@@ -16,11 +16,11 @@ body {
    margin: 0;
    margin-top: 12rem;
    margin-bottom: 8rem;
-   gap: 10rem;
+   gap: 6rem;
    flex-direction: column;
    flex-wrap: nowrap;
    padding: 0;
-
+   align-items: center;
 }
 h1 {
    font-family: tiny;
@@ -131,7 +131,6 @@ p {
 }
 
 
-
 .inter-tight-h2 {
    font-family: "Inter Tight", sans-serif;
    font-optical-sizing: auto;
@@ -152,10 +151,11 @@ p {
    width: 10rem;
    height: 10rem;
    border-radius: 2rem;
+   border: 1px solid #f5f5f5;
    background-size: cover;
    background-position: center;
    background-image: url('images/userpic.jpg');
-   box-shadow: 0px 0px 8px 0px #C1C4C9 inset;
+   box-shadow: 0px 0px 8px 0px #f5f5f5 inset;
    position: relative;
    border-radius: 2rem;
    transition: all 1s ease;
@@ -170,10 +170,11 @@ p {
    width: 10rem;
    height: 10rem;
    border-radius: 5rem;
+   border: 1px solid #f5f5f5;
    background-size: cover;
    background-position: center;
    background-image: url('images/userlogo.webp');
-   box-shadow: 0px 0px 8px 0px #C1C4C9 inset;
+   box-shadow: 0px 0px 8px 0px #f5f5f5 inset;
    /* right: 198px; */
 
    transition: all 1s ease;
@@ -189,8 +190,9 @@ p {
 .myImage:hover .profile-photo,
 .myImage:hover .profile-logo{
    /* border-radius: 2rem; */
-   box-shadow: 0px 0px 8px 0px #91999D inset;
+   box-shadow: 0px 0px 8px 0px #f5f5f5 inset;
    transition: all 1s ease;
+   border-color: #DBDBDB;
 }
 .myImage:hover .profile-logo {
    position: absolute;
@@ -267,6 +269,7 @@ p {
    padding: 10px 20px;
    z-index: 1;
 }
+
 
 
 
@@ -358,38 +361,49 @@ p {
 
 .tooltip {
    position: absolute;
-   top: 50%; 
+   top: 50%;
    left: 50%;
-   min-width: 4rem; 
+   min-width: 4rem;
+   padding: 1.2rem;
    white-space: nowrap;
    text-align: center;
    display: inline-block;
-   transform: translate(-50%, -100%) scale(0.8);
-   padding: 1.2rem;
-   background: rgb(69,72,75);
    background: linear-gradient(0deg, rgba(69,72,75,1) 0%, rgba(26,26,26,1) 7%, rgba(69,72,75,1) 100%);
    color: white;
-   text-align: center;
    border-radius: 1.2rem;
    opacity: 0;
    visibility: hidden;
-   transition: opacity .2s ease, visibility 0.3s ease, transform 0.3s ease;
    z-index: 100;
-   transition: .4s;
-   animation-delay: .4s;
+   transform: translate(-50%, -100%) scale(0.8);
+   transition: opacity 0.2s ease, visibility 0.3s ease, transform 0.3s ease;
    box-shadow: 0 4px 1.2rem rgba(0, 0, 0, 0.2);
    filter: blur(8px);
    backdrop-filter: blur(10px);
-   animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
-   animation-duration: .4s
+   animation: fadeInOut 0.4s cubic-bezier(0.05, 0, 0.07, 0.95) 0.4s;
 }
+
+/* Пример анимации для показа/скрытия */
+@keyframes fadeInOut {
+   0% {
+      opacity: 0;
+      transform: translate(-50%, -100%) scale(0.8);
+   }
+   100% {
+      opacity: 1;
+      transform: translate(-50%, -100%) scale(1);
+   }
+}
+
+
+
+
+
 
 .tooltip p {
    font-size: 1.6rem;
-   /* font-family: 'Times New Roman', Times, serif; */
    font-family: "Inter Tight", sans-serif;
    margin: 0;
-   margin-bottom: .2rem;
+   /* margin-bottom: .2rem; */
    color: 0 1px 3px rgba(255, 255, 255, 0.7);
    text-shadow: #333;
    text-transform: uppercase;
@@ -493,6 +507,73 @@ p {
 
 
 
+/* SKills */
+
+.skills {
+   /* width: 496px; */
+   display: flex;
+   position: relative;
+   flex-direction: row;
+   gap: 0;
+   justify-content: center;
+   align-items: center;
+   transition: gap 0.3s ease;
+   margin-top: 2rem;
+}
+
+.skillsBox {
+   background: linear-gradient(0deg, #fff 0%, #f5f5f5 100%);
+   /* background-color: #fff; */
+   overflow: hidden;
+   border-radius: 3rem;
+   box-shadow: inset 2px -2px 4px 2px #f5f5f5;
+   border: 1px solid #f5f5f5;
+   width: 40rem;
+
+}
+
+
+.skillsBox:first-child{
+   transform: translateX(0) translateY(0) rotate(-2deg);
+}
+
+.skillsBox:last-child{
+   transform: translateX(0) translateY(2rem) rotate(2deg);
+}
+.skillsBox li{
+   text-align: center;
+   /* background-color: #f5f5f5; */
+   border-bottom: 1px solid #DBDBDB;
+   margin: 0;
+   padding: 1rem 2rem 1rem 2rem;
+}
+
+
+.skillsBox li:first-child{
+   text-align: center;
+   background-color: #9CC1E6;
+   color: #f5f5f5;
+   border-radius: 3rem 3rem 0 0;
+   border-color: #86B1DD;
+
+   font-size: 1.4rem;
+   line-height: 140%;
+   font-family: "IBM Plex Mono", monospace;
+   font-weight: 400;
+   text-align: center;
+}
+
+
+.skillsBox li:last-child{
+   text-align: center;
+   border-bottom: 0;
+   padding-bottom: 1.8rem;
+}
+
+
+
+
+
 /* Expirience */
 
 .experience {
@@ -502,13 +583,18 @@ p {
    width: 496px;
    height: auto;
    justify-content: center;
-   gap: 2rem;
+   gap: 2.2rem;
    margin: auto;
    align-items: center
 }
 .experience h1 {
    text-align: center;
 }
+
+.experience h5{
+   color: #666;
+   margin-bottom: .8rem;
+ }
 
 ul{
    font-size: 1.6rem;
@@ -524,7 +610,6 @@ li{
 li span {
    font-weight: 500;
 }
-
 
  
 .product-results {
@@ -571,7 +656,49 @@ li span {
  }
 
 
+
  .toggle-btn {
+   height: 4rem;
+   width: fit-content;
+   margin: auto;
+   margin-top: 15px;
+   /* background: none; */
+   background-color: #ffffff;
+   border: 1px solid #ffffff;
+
+   /* border: none; */
+   border-radius: 4rem;
+   font-size: 1.6rem;
+   font-family: "Inter Tight", sans-serif;
+   line-height: 2.5rem;
+   font-weight: 300;
+   text-decoration: none;
+   color: #91999D;
+   cursor: pointer;
+   padding: 0 2rem;
+   transition: all 0.8s cubic-bezier(0.05, 0, 0.07, 0.95);
+ }
+ 
+ .toggle-btn:hover {
+   color: #333;
+   border: 1px solid #DBDBDB;
+   background-color: #f5f5f5;
+   background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
+   border-radius: 4rem;
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+ /* .toggle-btn {
    height: 4rem;
    width: fit-content;
    margin: auto;
@@ -593,7 +720,6 @@ li span {
  
  .toggle-btn:hover {
    color: #333;
-   /* position: absolute; */
    bottom: 0;
    left: 0;
    width: fit-content;
@@ -607,10 +733,8 @@ li span {
    z-index: 0; 
    animation-timing-function: cubic-bezier(0.05, 0, 0.07, 0.95);
    transition: all 2s ease;
-
- }
+ } */
  
-
 /* Карточки кейсов */
 
 
@@ -627,6 +751,7 @@ li span {
    align-items: center;
    transition: gap 0.3s ease;
    margin-top: 2rem;
+   margin-bottom: 2rem;
 }
 
 .casesSber:hover, 
