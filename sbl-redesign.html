@@ -8,24 +8,9 @@
 
 
 
-   <style>
-      .page {
-    opacity: 0; /* По умолчанию страница невидима */
-    transition: opacity 1s ease; /* Плавный переход */
-    margin: auto;
-      }
-
-      body.loaded .page {
-         opacity: 1; /* Появление после загрузки */
-      }
-
-   </style>
-
-
-
-
 </head>
 <body class="case-body ">
+   <div class="page-container">
    <div class="page">
       <div class=" case-description">
          <h1>Редизайн медиа СберБизнес Live</h1>
@@ -59,14 +44,13 @@
          </div>
       </div>   
 
-   </div>
-
-
-   <div class="page">
       <h1>Welcome to My Portfolio</h1>
       <p>Click to view the next page with animation effect.</p>
       <a href="/index.html" class="transition-link">Go to main</a>
-  </div>
+
+   </div>
+
+
   
       
 
@@ -75,6 +59,6 @@
 
 
    <script src="js/js.js"></script>
-
+</div>
 </body>
 </html>
