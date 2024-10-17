@@ -1,10 +1,6 @@
 @import url(fonts.css);
 
 
-
-
-
-
 :root {
    --text-black-color: #1A1A1A;
    --text-gray-dark-color: #45484B;
@@ -15,13 +11,10 @@
    --bg-gray-03: #F5F5F5;
 
    --bg-white: #ffffff;
-
- }
-
+}
 
 html {
 font-size: 10px;
-
 
 }
 body {
@@ -31,8 +24,6 @@ body {
    margin: 0;
    margin-top: 12rem;
    margin-bottom: 8rem;
-
-
 }
 
 
@@ -44,22 +35,27 @@ h1 {
    font-weight: 600;
    font-style: normal;
    line-height: 110%;
+   margin-bottom: 1rem;
+   color: var(--text-black-color, #1A1A1A);
+
+
 }
 
 h2{
    font-size: 2rem;
-   color: var(--gray-dark-color);
+   color: var(--text-gray-light-color, #91999D);
    font-family: "IBM Plex Mono", monospace;
    font-weight: 400;
    font-style: normal;
    text-align: center;
    margin-top: 2rem;
+   margin-bottom: 4rem;
 }
 
 h3 {
    font-size: 1.4rem;
    line-height: 140%;
-   color: var(--gray-dark-color);
+   color: var(--text-gray-light-color, #91999D);
    font-family: "IBM Plex Mono", monospace;
    font-weight: 400;
    font-style: normal;
@@ -71,7 +67,9 @@ h4{
    font-family: "Inter Tight", sans-serif;
    line-height: 2.5rem;
    font-weight: 600;
-   color: var(--text-gray-light-color);
+   text-align: center;
+   color: var(--text-gray-dark-color, #45484B);
+   margin-bottom: 1rem;
 }
 
 h5 {
@@ -81,6 +79,8 @@ h5 {
    font-weight: 600;
    text-align: center;
    margin-bottom: .6rem;
+   color: var(--text-black-color, #1A1A1A);
+
 }
 
 
@@ -122,7 +122,7 @@ p {
    font-family: "Inter Tight", sans-serif;
    line-height: 2.5rem;
    font-weight: 300;
-   color: var(--text-gray-light-color);
+   color: var(--text-gray-light-color, #91999D);
 }
 
 .aboutMe{
@@ -135,7 +135,7 @@ p {
    margin: auto;
    gap: 0;
    align-items: center;
-
+   margin-bottom: 3rem;
 }
 
 
@@ -200,7 +200,7 @@ p {
    /* border-radius: 2rem; */
    box-shadow: 0px 0px 8px 0px #f5f5f5 inset;
    transition: all 1s ease;
-   border-color: var(--bg-gray-02);
+   border-color: var(--bg-gray-02,#DBDBDB);
 }
 .myImage:hover .profile-logo {
    position: absolute;
@@ -231,12 +231,12 @@ p {
    line-height: 2.5rem;
    font-weight: 300;
    text-decoration: none;
-   color: var(--text-gray-light-color);
+   color: var(--text-gray-light-color, #91999D);
    transition: .4s;
 }
 
 .social a:hover{
-   color: var(--text-gray-dark-color);
+   color: var(--text-gray-dark-color, #45484B);
 }
 
 .highlight {
@@ -246,7 +246,7 @@ p {
    width: 0;
    height: 4rem;
    border: 1px solid #DBDBDB;
-   background-color: var(--bg-gray-03);
+   background-color: var(--bg-gray-03, #F5F5F5);
    background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
    border-radius: 4rem;
    opacity: 0;
@@ -272,7 +272,7 @@ p {
 .link {
    position: relative;
    text-decoration: none;
-   color: var(--text-gray-dark-color);
+   color: var(--text-gray-dark-color, #45484B);
    font-size: 16px;
    padding: 10px 20px;
    z-index: 1;
@@ -328,9 +328,9 @@ p {
    cursor: pointer;
 }
 .caseItem:hover {
-   background-color: var(--bg-gray-03);
-   border-color: var(--bg-gray-02); 
-   box-shadow: var(--text-gray-light-color);
+   background-color: var(--bg-gray-03, #F5F5F5);
+   border-color: var(--bg-gray-02, #DBDBDB); 
+   box-shadow: var(--text-gray-light-color, #91999D);
    transition: .5s;
    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
    transform: scale(1.02   );
@@ -342,7 +342,7 @@ p {
    transition: .5s;
    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
    transform: scale(1);
-   background-color: var(--text-gray-dark-color);
+   background-color: var(--text-gray-dark-color, #45484B);
 }
 
 
@@ -410,7 +410,7 @@ p {
    margin: 0;
    /* margin-bottom: .2rem; */
    color: 0 1px 3px rgba(255, 255, 255, 0.7);
-   text-shadow: var(--text-gray-dark-color);
+   text-shadow: var(--text-gray-dark-color, #45484B);
    text-transform: uppercase;
 
 }
@@ -419,7 +419,7 @@ p {
    font-size: 1.2rem;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    transform: scale(.2);
-   color: var(--text-gray-dark-color);
+   color: var(--text-gray-dark-color, #45484B);
    font-family: "IBM Plex Mono", monospace;
    font-weight: 400;
    font-style: normal;
@@ -476,8 +476,8 @@ p {
 }
 
 .caseItem:hover .logoIcon {
-   border-color: var(--bg-gray-02); 
-   box-shadow: var(--text-gray-light-color);
+   border-color: var(--bg-gray-02, #DBDBDB); 
+   box-shadow: var(--text-gray-light-color, #91999D);
    transition: .5s;
    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
    animation-duration: .6s;
@@ -489,7 +489,7 @@ p {
    font-size: 1.2rem;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    transform: scale(.8);
-   color: var(--bg-gray-01);
+   color: var(--bg-gray-01, #C1C4C9);
    font-family: "IBM Plex Mono", monospace;
    font-weight: 400;
    font-style: normal;
@@ -553,7 +553,7 @@ p {
 .skillsBox li:first-child{
    text-align: center;
    background-color: #9CC1E6;
-   color: var(--bg-gray-03);
+   color: var(--bg-gray-03, #F5F5F5);
    border-radius: 3rem 3rem 0 0;
    border-color: #86B1DD;
 
@@ -583,7 +583,7 @@ p {
    width: 496px;
    height: auto;
    justify-content: center;
-   gap: 2.2rem;
+   /* gap: 2.2rem; */
    margin: auto;
    align-items: center
 }
@@ -592,7 +592,7 @@ p {
 }
 
 .experience h5{
-   color: var(--text-gray-light-color);
+   color: var(--text-gray-light-color, #91999D);
    margin-bottom: .8rem;
  }
 
@@ -601,7 +601,7 @@ ul{
    font-family: "Inter Tight", sans-serif;
    line-height: 2.5rem;
    font-weight: 300;
-   color: var(--text-gray-light-color);
+   color: var(--text-gray-dark-color, #45484B);
 }
 li{
    margin-bottom: .5rem;
@@ -617,6 +617,7 @@ li span {
    width: auto;
    display: flex;
    flex-direction: column;
+   margin-bottom: 3rem;
  }
  
 .result-list {
@@ -668,16 +669,16 @@ li span {
    line-height: 2.5rem;
    font-weight: 300;
    text-decoration: none;
-   color: var(--text-gray-light-color);
+   color: var(--text-gray-light-color, #91999D);
    cursor: pointer;
    padding: 0 2rem;
    transition: all 0.8s cubic-bezier(0.05, 0, 0.07, 0.95);
 }
  
 .toggle-btn:hover {
-   color: var(--text-gray-dark-color);
+   color: var(--text-gray-dark-color, #45484B);
    border: 1px solid #DBDBDB;
-   background-color: var(--bg-gray-03);
+   background-color: var(--bg-gray-03, #F5F5F5);
    background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
    border-radius: 4rem;
 }
@@ -700,7 +701,7 @@ li span {
    align-items: center;
    transition: gap 0.3s ease;
    margin-top: 2rem;
-   margin-bottom: 2rem;
+   margin-bottom: 3rem;
 }
 
 .casesSber:hover, 
@@ -713,7 +714,7 @@ li span {
 
 .caseCard {
    font-size: 16px;
-   color: var(--text-gray-dark-color);
+   color: var(--text-gray-dark-color, #45484B);
    bottom: 0;
    left: 0;
    height: auto;
@@ -795,6 +796,7 @@ li span {
    padding-left: 1rem;   
    padding-right: 1rem;
    text-align: left;
+   color: var(--text-gray-dark-color, #45484B);
 }
 .caseCard p,
 .prjCard p {
@@ -802,7 +804,7 @@ li span {
    font-family: "Inter Tight", sans-serif;
    line-height: 2.5rem;
    font-weight: 300;
-   color: var(--text-gray-light-color);
+   color: var(--text-gray-light-color, #91999D);
    padding-left: 1rem;   
    padding-right: 1rem;
 }
@@ -853,11 +855,11 @@ li span {
    padding: .5rem;
    padding-right: 1.5rem;
 
-   background-color: var(--bg-gray-03);
+   background-color: var(--bg-gray-03, #F5F5F5);
    border-radius: 2rem;
    border: 1px solid #DBDBDB;
    background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
-   color: var(--text-gray-dark-color);
+   color: var(--text-gray-dark-color, #45484B);
    text-decoration: none;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
 
@@ -888,7 +890,7 @@ li span {
 .prjCardCover {
    height: 10rem;
    width: 40%;
-   background-color: var(--text-gray-dark-color);
+   background-color: var(--text-gray-dark-color, #45484B);
    background-position: center;
    background-size: cover;
    border-radius: 1.5rem 0.5rem 0.5rem 1.5rem;
@@ -915,7 +917,7 @@ li span {
 .footer p {
    font-size: 1.2rem;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   color: var(--text-gray-dark-color);
+   color: var(--text-gray-dark-color, #45484B);
    font-family: "IBM Plex Mono", monospace;
    font-weight: 400;
    font-style: normal;
@@ -954,4 +956,4 @@ li span {
 .page.fade-in {
    opacity: 1;
    transform: translateY(0);
-}s
+}
