@@ -92,6 +92,40 @@ p {
    color: var(--gray-dark-color);
 }
 
+
+
+.page-container {
+   position: relative;
+   width: 100%;
+   height: auto;
+   overflow: visible;
+}
+
+.page {
+   opacity: 0;
+   display: flex;
+   position: relative;
+   align-content: center;
+   gap: 6rem;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   padding: 0;
+   align-items: center;
+   transform: translateY(60px); 
+   transition: opacity 1s ease, transform 1s ease; 
+}
+
+.page.fade-out {
+   opacity: 0;
+   transform: translateY(60px);
+}
+
+.page.fade-in {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+
 #scrollBar {
    position: fixed;
    top: 0;
@@ -924,36 +958,3 @@ li span {
    text-align: center;
 }
 
-
-
-
-.page-container {
-   position: relative;
-   width: 100%;
-   height: auto;
-   overflow: visible;
-}
-
-.page {
-   opacity: 0;
-   display: flex;
-   position: relative;
-   align-content: center;
-   gap: 6rem;
-   flex-direction: column;
-   flex-wrap: nowrap;
-   padding: 0;
-   align-items: center;
-   transform: translateY(60px); 
-   transition: opacity 1s ease, transform 1s ease; 
-}
-
-.page.fade-out {
-   opacity: 0;
-   transform: translateY(60px);
-}
-
-.page.fade-in {
-   opacity: 1;
-   transform: translateY(0);
-}
