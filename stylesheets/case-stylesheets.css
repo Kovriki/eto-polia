@@ -18,11 +18,12 @@ body {
 }
 
 .header {
-   position: absolute;
-   top: 1 rem;
+   position: sticky;
+   top: 10px;
    display: flex;
    /* justify-content: center; */
    align-items: center;
+   z-index: 100;
 }
 .homeBtn {
    width: 4rem;
@@ -35,6 +36,13 @@ body {
    background-image: url('images/userlogo.webp');
    box-shadow: 0px 0px 8px 0px #f5f5f5 inset;
    transition: all 1s ease;
+
+}
+.homeBtn:hover {
+   box-shadow: 0px 0px 8px 0px #f5f5f5 inset;
+   transition: all .6s ease;
+   border-color: var(--bg-gray-02,#DBDBDB);
+   transform: rotate(10deg);
 }
 
 .case-cover {
@@ -43,22 +51,33 @@ body {
    background: rgb(245,245,245);
    background-size: cover;
    background-position: center;
-   background-image: url('images/Covers/sber-rebranding.jpg');
    position: absolute;
    top: -60px;
    z-index: -10;
 }
+#case-cover-sber-redesign{
+   background-image: url('images/Covers/sber-rebranding.jpg');
+}
+#case-cover-sber-constructor {
+   background-image: url('images/Covers/sber-projects.jpg');
+}
+#case-cover-sber-design-system {
+   background-image: url('images/Covers/sber-design-system.jpg');
+}
+#case-cover-skim {
+   background-image: url('images/Covers/skim.jpg');
+}
+#case-cover-fishCover {
+   background-image: url('images/Covers/default-cover.jpg');
+
+}
+
 .gradientBox{
    width: 100%;
    height: 100%;
    background: linear-gradient(180deg, rgba(245,245,245,0) 50%, rgba(255,255,255,1) 100%);
 
 }
-
-
-
-
-
 
 .case-body {
    display: flex;
@@ -76,7 +95,7 @@ body {
    gap: 1rem;
    align-items: flex-start;
    margin: auto;
-   margin-top: 20rem;
+   margin-top: 10rem;
 }
 .case-descriptionRow{
    display: flex;
@@ -84,14 +103,13 @@ body {
    gap: 1rem;
    width: 496px;
    color: #333;
-   
+   margin-bottom: 1.6rem;
 }
 
 .case-descriptionRow h4 {
-   width: 100px;
+   /* width: 100px; */
    color: var(--text-gray-dark-color, #45484B);
-   color: --;
-
+   margin-bottom: 0;
 }
 .case-descriptionRow p {
    width: 496px;
@@ -99,27 +117,87 @@ body {
 }
 
 
-.tags{
-   display: flex;
-   flex-direction: row;
-   gap: 1rem;
-}
 
-.tag {
-   font-size: 1.2rem;
-   font-family: "Inter Tight", sans-serif;
-   font-weight: 500;
-   color: var(--text-gray-light-color);
-   position: relative;
-   background-color: var(--bg-white);
-   border-radius: 1rem;
-   border: 1px solid #f5f5f5;
-   padding: .6rem;
-}
 
 
 .case-body .aboutMe,
 .case-body h4 {
    align-items: flex-start;
    text-align: start;
+}
+
+
+.navigationPanel{
+   width: 496px;
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+   align-items: center;
+   margin: auto;
+   justify-content: center;
+}
+.navBtn{
+   position: relative;
+   width: calc(50% - 1rem);
+   aspect-ratio: 1 / 1;
+   background-color: var(--bg-white);
+   border-radius: 2em;
+   border: 1px solid #f5f5f5;
+   transition: transform 0.6s ease-in-out;
+   cursor: pointer;
+   overflow: hidden;
+   /* padding: 2rem; */
+   justify-items: center;
+   text-decoration: none;
+}
+
+.navBtn:hover{
+   background-color: var(--bg-gray-03, #F5F5F5);
+   border-color: var(--bg-gray-02, #DBDBDB); 
+   box-shadow: var(--text-gray-light-color, #91999D);
+   transition: .5s;
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+   transform: scale(1.02);
+   background: var(--White, #f5f5f5);
+   box-shadow: 0px 0px 74px 0px #fff inset;  
+}
+
+.navBtn:active {
+   transition: .5s;
+   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+   transform: scale(1);
+   background-color: var(--text-gray-dark-color, #45484B);
+}
+
+
+.navBtn h3 {
+   margin-top: 3rem;
+   margin-bottom: .8rem;
+}
+
+.navBtn .casesSber {
+   transform: scale(.6);
+   margin: auto;
+}
+
+.navBtn .caseCard {
+   width: calc(100% - 4rem);
+   position: static;
+   bottom: -2rem;
+   padding-bottom: .5rem;
+   transform: translateX(2rem) translateY(4rem) rotate(-10deg);
+   /* border-radius: 1rem; */
+}
+
+.navBtn.next .caseCard {
+   transform: translateX(4rem) translateY(4rem) rotate(-10deg);
+}
+.navBtn.before .caseCard {
+   transform: translateX(-4rem) translateY(4rem) rotate(10deg);
+}
+
+.navBtn:hover .caseCard {
+   /* transform: translateX(1rem) translateY(2rem) rotate(-4deg); */
+   transform: translateX(0) translateY(0) rotate(-0);
+
 }
