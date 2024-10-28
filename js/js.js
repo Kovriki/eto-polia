@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Воспроизведение звука
 
 document.addEventListener('DOMContentLoaded', function () {
-    const caseItems = document.querySelectorAll('.caseItem');
+    const caseItems = document.querySelectorAll('.caseItem, .caseCard, .toggle-btn, .link, .prjCard, .navBtn, .homeBtn');
     const hoverSound = document.getElementById('hoverSound');
 
     caseItems.forEach(item => {
