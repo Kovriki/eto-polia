@@ -18,31 +18,49 @@
 
 @media  (max-width: 796px){
   html {
-    font-size: 8px;
+    font-size: 9px;
     overflow-x: hidden;
   }
+
   body {
     /* background-color: rgb(132, 187, 250); */
     overflow-x: hidden;
   }
+
   .social {
+    width: 100%;
     gap: 1rem ;
   }
+
+  .social a:hover{
+    color: #91999D;
+  }
+
+  .social:hover .highlight {
+    opacity: 0;
+  }
+
+  .link {
+    padding: 0;
+  }
+
+
+
+
+
   .hero, 
   .experience, 
   .footer {
     width: calc(100% - 4rem);
     padding-right: 1rem;
     padding-left: 1rem;
-
   }
-
 
   .linkWrapper {
-    flex-wrap: wrap;
-  }
-  .linkWrapper .caseItem {
-    flex: 1 1 48%;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
 
@@ -50,6 +68,34 @@
   li {
     font-size: 1.8rem;
     line-height: 3rem;
+  }
+
+
+  .logoIcon{
+    top: calc( 50% - 1.5em );
+    transform:  translate(0,0) scale(.8);
+  }
+
+  .caseItem:hover {
+    top: calc( 50% - 1.5em );
+    transform:  translate(0,0) scale(1);
+    border: 1px solid #f5f5f5;
+    background-color: #ffffff;
+  }
+  
+
+  .caseItem:hover .tooltip {
+    opacity: 0;
+  }
+
+
+  .caseItem:hover .logoIcon{
+    top: calc( 50% - 1.5em );
+    transform:  translate(0,0) scale(.8);
+  }
+
+  .caseItem:hover .readMore{
+    opacity: 0;
   }
 
 
@@ -74,6 +120,25 @@
   {
     transform: translateX(0) translateY(0) rotate(0);
   }
+
+
+
+
+
+
+  .skills{
+   flex-direction: column;
+   width: 100%;
+  }
+
+  .skillsBox{
+   width: 90%;
+  }
+
+
+
+
+
 
 }
 
