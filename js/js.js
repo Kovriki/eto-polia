@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function openModal() {
     document.getElementById("myModal").style.display = "block";
-  };
+};
   
-  function closeModal() {
+function closeModal() {
     document.getElementById("myModal").style.display = "none";
-  } ;
+} ;
 
 
 
