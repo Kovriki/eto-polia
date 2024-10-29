@@ -184,6 +184,10 @@ margin-top: 0;
 }
 
 
+.gallery-item.small {
+  flex: 1 1 90%; /* Занимает всю ширину строки */
+  padding: 1rem;
+}
 
 
 
