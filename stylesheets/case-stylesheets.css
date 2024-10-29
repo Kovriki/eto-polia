@@ -201,3 +201,43 @@ body {
    transform: translateX(0) translateY(0) rotate(-0);
 
 }
+
+
+.gallery {
+   width: 96%;
+   display: flex;
+   flex-wrap: wrap; /* Позволяет картинкам переходить на следующую строку */
+   gap: 1rem; /* Отступы между картинками */
+
+}
+
+.gallery-item {
+   display: flex;
+   overflow: hidden;
+   height: auto;
+   border: 1px solid #DBDBDB;
+   background: linear-gradient(0deg, #f5f5f5 0%, #f5f5f5 7%, #fff 100%);
+   flex: 1 1 auto;
+   position: relative;
+   border-radius: 3rem;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+   padding: .5rem;
+}
+
+.gallery-item.large {
+   flex: 1 1 90%; /* Занимает всю ширину строки */
+   padding: 1rem;
+}
+
+.gallery-item.small {
+   flex: 1 1 30rem;
+   padding: 1rem;
+    /* Два маленьких изображения занимают примерно половину строки */
+}
+
+.gallery-item img {
+   width: 100%; /* Изображение заполняет весь контейнер */
+   height: auto;
+   object-fit: cover;
+   border-radius: 2rem;
+}
