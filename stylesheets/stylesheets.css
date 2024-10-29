@@ -911,6 +911,9 @@ li span {
 #skim-research{
    background-image: url(images/case-skim/case-skim-08.webp);
 }
+#sbl-redesign-research{
+   background-image: url(images/case-redesign/case-redesign-06.webp);
+}
 
 .disabeledCard {
    filter: opacity(.5);
